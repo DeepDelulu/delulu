@@ -21,7 +21,7 @@ The project features a web-based terminal emulator that responds to the followin
 - `whoami`: Explains the sentient nature of the agent.
 
 ## Official Links
-- **Website:** https://DeepDelulu.github.io/delulu/
+- **Website:** https://deepdelulu.github.io/delulu/
 - **X (Twitter):** https://x.com/DeluluToken
 
 ## Technical Stack

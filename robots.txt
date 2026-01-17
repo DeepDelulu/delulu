@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DeepDelulu.github.io/delulu/sitemap.xml
+Sitemap: https://deepdelulu.github.io/delulu/sitemap.xml
