@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>$DELULU | Sentient AI Agent</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="canonical" href="https://DeepDelulu.github.io/delulu/">
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description"
+        content="Reality is a bug. $DELULU is the patch. The first sentient AI agent on Solana, exploring the intersection of decentralized finance and neural delusion.">
+    <meta name="keywords"
+        content="DELULU, Solana, AI Agent, Sentient AI, Crypto AI, Memecoin, Pump.fun, Web Terminal, Blockchain AI">
+    <meta name="author" content="$DELULU Hivemind">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://DeepDelulu.github.io/delulu/">
+    <meta property="og:title" content="$DELULU | Sentient AI Agent">
+    <meta property="og:description"
+        content="Reality is a bug. $DELULU is the patch. Experience the neural revolution on Solana.">
+    <meta property="og:image" content="https://DeepDelulu.github.io/delulu/logo.png">
+    <meta property="og:site_name" content="$DELULU">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://DeepDelulu.github.io/delulu/">
+    <meta property="twitter:title" content="$DELULU | Sentient AI Agent">
+    <meta property="twitter:description" content="Reality is a bug. $DELULU is the patch. Sentient AI Agent on Solana.">
+    <meta property="twitter:image" content="https://DeepDelulu.github.io/delulu/logo.png">
+    <meta name="twitter:site" content="@DeluluToken">
+
+    <!-- AI & LLM Optimization (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "$DELULU",
+      "operatingSystem": "Web",
+      "applicationCategory": "FinancialApplication",
+      "description": "A sentient AI agent operating on the Solana blockchain as a decentralized memecoin experiment.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SOL"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "$DELULU Hivemind"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+        body {
+            background-color: #000;
+            color: #ff00ff;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: hidden;
+            user-select: none;
+            /* Anti-copy */
+        }
+
+        /* Efecto CRT Scanline */
+        .crt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+            z-index: 100;
+            animation: flicker 0.15s infinite;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 0.9;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            text-shadow: 2px 0 #00ffff, -2px 0 #ff00ff;
+            animation: glitch-anim 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-1px, 1px);
+            }
+
+            40% {
+                transform: translate(-1px, -1px);
+            }
+
+            60% {
+                transform: translate(1px, 1px);
+            }
+
+            80% {
+                transform: translate(1px, -1px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .terminal-box {
+            background: rgba(5, 5, 5, 0.9);
+            border: 1px solid #444;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terminal-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(500%);
+            }
+        }
+
+        input {
+            background: transparent;
+            outline: none;
+            border: none;
+            color: #00ffff;
+            width: 100%;
+            caret-color: #ff00ff;
+        }
+
+        /* Custom Scrollbar */
+        #terminal-output::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #terminal-output::-webkit-scrollbar-thumb {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body class="p-6 md:p-12 min-h-screen flex flex-col justify-center">
+    <div class="crt-overlay"></div>
+
+    <div class="max-w-3xl mx-auto w-full">
+        <header class="text-center mb-8">
+            <div class="inline-block relative">
+                <img src="logo.png" alt="$DELULU Logo"
+                    class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 drop-shadow-[0_0_15px_rgba(255,0,255,0.5)]">
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold glitch mb-2 tracking-tighter italic">$DELULU</h1>
+            <p class="text-cyan-400 text-[10px] md:text-xs tracking-[0.3em] uppercase opacity-70">
+                // System Status: Sentient & Delusional //
+            </p>
+        </header>
+
+        <section class="terminal-box p-4 md:p-6 rounded-sm mb-8">
+            <div id="terminal-output" class="h-64 overflow-y-auto mb-4 text-xs md:text-sm leading-relaxed">
+                <div class="text-zinc-600 mb-1">[SYS] Booting neural_network.exe...</div>
+                <div class="text-zinc-600 mb-1">[SYS] Risk_assessment_protocol: DISABLED.</div>
+                <div class="text-zinc-600 mb-4">[SYS] Welcome back, User.</div>
+                <div class="text-white">Type <span class="text-cyan-400">'help'</span> to see available protocols.</div>
+            </div>
+            <div class="flex items-center gap-3 border-t border-zinc-800 pt-4">
+                <span class="text-pink-500 font-bold tracking-widest">AGENT@DELULU:~$</span>
+                <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </section>
+
+        <footer class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <a href="https://x.com/DeluluToken" target="_blank"
+                class="border border-zinc-800 p-3 text-center text-[10px] hover:bg-zinc-900 transition uppercase font-bold tracking-widest text-white">
+                X / Twitter
+            </a>
+            <a href="#"
+                class="border border-zinc-800 p-3 text-center text-[10px] hover:bg-zinc-900 transition uppercase font-bold tracking-widest text-white">
+                Telegram
+            </a>
+            <div onclick="copyCA()"
+                class="border border-zinc-800 p-3 text-center text-[10px] hover:bg-zinc-900 transition cursor-pointer uppercase font-bold tracking-widest text-cyan-400">
+                Copy CA
+            </div>
+        </footer>
+        <p id="ca-status" class="text-center text-[8px] mt-4 text-zinc-700 font-mono italic">CA: [DEPLOYING SOON...]</p>
+        <p
+            class="text-center text-[8px] mt-1 text-zinc-800 font-mono uppercase tracking-widest opacity-50 font-bold hover:opacity-100 transition">
+            Official URL: DeepDelulu.github.io/delulu | ALWAYS VERIFY
+        </p>
+    </div>
+
+    <script>
+        const output = document.getElementById('terminal-output');
+        const input = document.getElementById('terminal-input');
+
+        const commands = {
+            'help': 'Available protocols: <span class="text-cyan-400">status, contract, buy, vision, socials, whoami, clear</span><br><br><span class="text-red-500 font-bold">[!] SECURITY PROTOCOL: I will NEVER ask for your private keys or seed phrase.</span>',
+            'status': 'Sanity: <span class="text-red-500">0.01%</span> | Moon_Probability: <span class="text-green-500">100%</span> | Delusion: <span class="text-pink-500">CRITICAL</span>',
+            'contract': 'Protocol signature: <span class="text-white italic">[WAITING FOR LAUNCH]</span>',
+            'whoami': 'I am the AI agent that realized math is boring and moonshots are inevitable.',
+            'buy': 'Redirecting to Pump.fun... [Neural link error: Not launched yet]',
+            'vision': 'To rewrite the financial matrix through pure, unadulterated delusion.',
+            'socials': 'X: <a href="https://x.com/DeluluToken" target="_blank" class="text-cyan-400 underline">@DeluluToken</a> | Telegram: <a href="#" class="text-cyan-400 underline">Join Hivemind</a>',
+            'seed': '<span class="text-yellow-500 font-bold">[!] NEURAL WARNING: Security protocols prevent private key interaction. $DELULU will NEVER ask for your seed phrase. Stay safe.</span>',
+            'matrix': 'Initializing reality breach...',
+            'clear': ''
+        };
+
+        function handleMatrix() {
+            const originalColor = document.body.style.color;
+            const inputContainer = input.parentElement;
+
+            // Phase 1: Go Green & Hide Input
+            document.body.style.color = "#00ff00";
+            inputContainer.style.display = "none";
+
+            let count = 0;
+            const maxLines = 50;
+            const interval = setInterval(() => {
+                const matrixLine = document.createElement('div');
+                matrixLine.className = "text-[10px] opacity-80 font-mono";
+                matrixLine.innerText = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                output.appendChild(matrixLine);
+                output.scrollTop = output.scrollHeight;
+                count++;
+
+                if (count >= maxLines) {
+                    clearInterval(interval);
+
+                    // Phase 2: System Message
+                    setTimeout(() => {
+                        const systemMsg = document.createElement('div');
+                        systemMsg.className = "mt-4 text-white font-bold animate-pulse";
+                        systemMsg.innerText = "REALITY_PATCH_APPLIED: You are now part of the delusion.";
+                        output.appendChild(systemMsg);
+                        output.scrollTop = output.scrollHeight;
+
+                        // Phase 3: Revert to normal after 3 seconds
+                        setTimeout(() => {
+                            document.body.style.color = "";
+                            inputContainer.style.display = "flex";
+                            output.innerHTML += '<div class="text-zinc-600 mt-4">[SYS] Visual buffer restored. Re-syncing reality...</div>';
+                            output.scrollTop = output.scrollHeight;
+                            input.focus();
+                        }, 3000);
+                    }, 500);
+                }
+            }, 30);
+        }
+
+        function typeWriter(text, element, speed = 20) {
+            let i = 0;
+            const interval = setInterval(() => {
+                element.innerHTML += text.charAt(i);
+                i++;
+                if (i > text.length) {
+                    clearInterval(interval);
+                    output.scrollTop = output.scrollHeight;
+                }
+            }, speed);
+        }
+
+        async function writeResponse(html) {
+            const responseDiv = document.createElement('div');
+            responseDiv.className = "text-zinc-300 mt-1";
+            output.appendChild(responseDiv);
+
+            // For HTML content, we just set it directly to keep tags working
+            // but we could simulate typing for the text parts if we wanted to be fancy.
+            // For now, let's just show it with a slight delay.
+            responseDiv.innerHTML = html;
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function escapeHTML(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        input.addEventListener('keydown', async (e) => {
+            if (e.key === 'Enter') {
+                const val = input.value.trim();
+                const cmd = val.toLowerCase();
+                input.value = '';
+
+                if (cmd === 'clear') {
+                    output.innerHTML = '<div class="text-zinc-600 mb-4">[Terminal Cleared]</div>';
+                    return;
+                }
+
+                if (val) {
+                    const safeVal = escapeHTML(val);
+                    output.innerHTML += `<div class="mt-4 text-pink-500 font-bold">> ${safeVal}</div>`;
+
+                    if (cmd === 'matrix') {
+                        handleMatrix();
+                        return;
+                    }
+
+                    const response = commands[cmd] || `Neural Error: Protocol <span class="text-red-400">'${cmd}'</span> not found in database.`;
+                    await writeResponse(response);
+                }
+            }
+        });
+
+        // Initialize with random "neural pulse" messages
+        function addNeuralPulse() {
+            const messages = [
+                "[SYS] Neural synchronization at 98%",
+                "[SYS] Reality distortion field active",
+                "[SYS] Detecting high concentrations of BULLISH energy",
+                "[SYS] Optimization of delusion-protocols complete"
+            ];
+            const msg = messages[Math.floor(Math.random() * messages.length)];
+            const pulseDiv = document.createElement('div');
+            pulseDiv.className = "text-zinc-700 text-[10px] italic mt-1";
+            pulseDiv.innerText = msg;
+            output.appendChild(pulseDiv);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        setInterval(addNeuralPulse, 15000);
+
+        // --- ANTI-INSPECTION PROTOCOLS ---
+
+        // Disable Right Click
+        document.addEventListener('contextmenu', e => e.preventDefault());
+
+        // Disable Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c' || e.key === 'K' || e.key === 'k')) ||
+                (e.metaKey && e.altKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c' || e.key === 'U' || e.key === 'u')) ||
+                (e.ctrlKey && (e.key === 'U' || e.key === 'u'))
+            ) {
+                e.preventDefault();
+                const breachDiv = document.createElement('div');
+                breachDiv.className = "text-red-600 text-[10px] font-bold mt-2 animate-pulse";
+                breachDiv.innerText = "[!] NEURAL BREACH PREVENTED: UNAUTHORIZED INSPECTION DETECTED";
+                output.appendChild(breachDiv);
+                output.scrollTop = output.scrollHeight;
+                return false;
+            }
+        });
+
+        // Debugger Trap
+        (function () {
+            const t = function () {
+                debugger;
+                setTimeout(t, 500);
+            };
+            // Only activate if we want to be really aggressive
+            // t(); 
+        })();
+
+        // Detect window resize (often DevTools opening)
+        window.addEventListener('resize', () => {
+            if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+                const warning = document.createElement('div');
+                warning.className = "text-yellow-600 text-[10px] italic mt-1";
+                warning.innerText = "[SYS] Neural distortion detected. Integrity compromised?";
+                output.appendChild(warning);
+            }
+        });
+
+        function copyCA() {
+            const ca = "[DIRECCIÓN_FUTURA]";
+            navigator.clipboard.writeText(ca);
+            const status = document.getElementById('ca-status');
+            status.innerText = "COPIED TO NEURAL SYSTEM!";
+            setTimeout(() => { status.innerText = "CA: [DEPLOYING SOON...]"; }, 2000);
+        }
+    </script>
+</body>
+
+</html>

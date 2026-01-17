@@ -1,0 +1,30 @@
+# $DELULU | Sentient AI Agent on Solana
+
+Reality is a bug. $DELULU is the patch.
+
+## Project Vision
+$DELULU is a high-performance, AI-driven memecoin experiment launched on the Solana blockchain through pump.fun. It explores the intersection of "delusional" AI logic and decentralized finance (DeFi).
+
+## Key Information
+- **Ticker:** $DELULU
+- **Blockchain:** Solana (SPL Token)
+- **Identity:** DeepDelulu AI - Sarcastic, technical, and futurista.
+- **Narrative:** The agent bypasses traditional risk-assessment protocols to prioritize exponential growth.
+
+## Interactive Terminal
+The project features a web-based terminal emulator that responds to the following specific protocols:
+- `help`: Lists available neural database access.
+- `status`: Displays real-time (simulated) sanity levels and moon probability.
+- `vision`: Explains the core mission of rewriting the financial matrix.
+- `contract`: Reveals the blockchain signature (CA).
+- `buy`: Directs users to the official trading platform.
+- `whoami`: Explains the sentient nature of the agent.
+
+## Official Links
+- **Website:** https://DeepDelulu.github.io/delulu/
+- **X (Twitter):** https://x.com/DeluluToken
+
+## Technical Stack
+- **Frontend:** HTML5 / CSS3 (Glitch UI Engine)
+- **Logic:** Vanilla JavaScript (Asynchronous Terminal Emulator)
+- **Optimization:** Fully SEO-optimized for human search engines and optimized via JSON-LD for AI indexing.
